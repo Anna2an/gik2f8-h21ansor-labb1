@@ -30,3 +30,7 @@ function renderBookList(bookList) {
 function renderBookDescription(bookDescription) {
   
 }
+
+document.getElementById('outer').addEventListener('mouseover', (e) => {
+  console.log('Lyssnare för outer div', e);  
+});
