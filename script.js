@@ -27,10 +27,15 @@ function renderBookList(bookList) {
   bookList.length > 0 && searchField.value && root.insertAdjacentHTML('beforeend', BookList(bookList));
 }
 
-function renderBookDescription(bookDescription) {
-  
+function handleClick(li){
+console.log(li);
 }
 
-document.getElementById('outer').addEventListener('mouseover', (e) => {
+/* document.onmouseover('handle').addEventListener('mouseover', (e) => console.log(e)) */
+/* function renderBookDescription(bookDescription) {
+  
+} */
+
+/* document.getElementById('outer').addEventListener('mouseover', (e) => {
   console.log('Lyssnare för outer div', e);  
-});
+}); */
