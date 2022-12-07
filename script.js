@@ -39,8 +39,8 @@ function handleMouseEnter(li){
 }
 
 function handleMouseLeave(li){
-  const removebookDetail = document.getElementById('bookDetail');
-  console.log('bookDetail');
+  const removebookDetail = document.getElementById(`bookDetail${li.id}`);
+  console.log(`bookDetail${li.id}`);
   //getOne(li.id).then((apiBooks) => (bookList = apiBooks));
   removebookDetail.remove();
   

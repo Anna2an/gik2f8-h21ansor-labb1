@@ -1,6 +1,6 @@
 const BookDescrition = book => {
   let html =`<ul 
-              id="bookDetail" 
+              id="bookDetail${book.id}" 
               class="rounded-md border-2 border-fuchsia-700 bg-fuchsia-100 "
              
               style="
