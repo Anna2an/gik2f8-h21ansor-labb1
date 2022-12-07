@@ -1,10 +1,28 @@
-const BookDescrition = BookDescription => {
+const BookDescrition = book => {
   let html =`<ul 
-              id="bookDetail rounded-md border-2 border-fuchsia-700 bg-fuchsia-100 w-full mx-auto">
-            ${book.author} - ${book.title}
-            </ul>`;
+              id="bookDetail" 
+              class="rounded-md border-2 border-fuchsia-700 bg-fuchsia-100 "
+             
+              style="
+              width:20vw;
+              ">
+            <img src="${book.coverImage}" alt="CoverImage"/>
+            <li>Title: ${book.title}</li> 
+            <li>Författare: ${book.author}</li>
+            <li> Utgivningsår: ${book.title}</li> 
+            <li> Sidor: ${book.pages}</li>         
+           
+            
+            </ul> `
+
+            
+            
+            
+            
+            ;
   return html;
 };
+
 
 /*const BookList = (bookList) => {
   let html = `<ul class="book-list rounded-md border-2 border-blue-400 bg-white w-full mx-auto">`;

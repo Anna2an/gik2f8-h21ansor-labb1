@@ -28,14 +28,25 @@ function renderBookList(bookList) {
   bookList.length > 0 && searchField.value && root.insertAdjacentHTML('beforeend', BookList(bookList));
 }
 //eventlyssnare för mouseover
-function handleMouseOver(li){
- 
-  //getOne(li.id).then((apiBooks) => (bookList = apiBooks));
-  getOne(li.id).then((book) => {console.log(book)});
+function handleMouseEnter(li){
 
-  console.log(li);
+  //getOne(li.id).then((apiBooks) => (bookList = apiBooks));
+  getOne(li.id).then((book) => {
+  
+  li.insertAdjacentHTML('beforeend', BookDescrition(book));
+  }
+  );
 }
 
+function handleMouseLeave(li){
+  const removebookDetail = document.getElementById('bookDetail');
+  console.log('bookDetail');
+  //getOne(li.id).then((apiBooks) => (bookList = apiBooks));
+  removebookDetail.remove();
+  
+  
+  
+}
 
 
 /* document.onmouseover('handle').addEventListener('mouseover', (e) => console.log(e)) */
