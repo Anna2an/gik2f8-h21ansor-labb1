@@ -1,6 +1,6 @@
 const BookDescrition = BookDescription => {
   let html =`<ul 
-              id="bookDetail rounded-md border-2 border-fuchsia-700 bg-fuchsia-100 w-full mx-auto cursor-text">
+              id="bookDetail rounded-md border-2 border-fuchsia-700 bg-fuchsia-100 w-full mx-auto">
             ${book.author} - ${book.title}
             </ul>`;
   return html;

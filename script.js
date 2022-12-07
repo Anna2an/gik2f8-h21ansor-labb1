@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
   getAll().then((apiBooks) => (bookList = apiBooks));
 });
 
+
 searchField.addEventListener('keyup', (e) =>
   renderBookList(
     bookList.filter(({ title, author }) => {
@@ -18,18 +19,24 @@ searchField.addEventListener('keyup', (e) =>
   )
 );
 
+
 function renderBookList(bookList) {
   const existingElement = document.querySelector('.book-list');
-
   const root = document.getElementById('root');
 
   existingElement && root.removeChild(existingElement);
   bookList.length > 0 && searchField.value && root.insertAdjacentHTML('beforeend', BookList(bookList));
 }
+//eventlyssnare för mouseover
+function handleMouseOver(li){
+ 
+  //getOne(li.id).then((apiBooks) => (bookList = apiBooks));
+  getOne(li.id).then((book) => {console.log(book)});
 
-function handleClick(li){
-console.log(li);
+  console.log(li);
 }
+
+
 
 /* document.onmouseover('handle').addEventListener('mouseover', (e) => console.log(e)) */
 /* function renderBookDescription(bookDescription) {
