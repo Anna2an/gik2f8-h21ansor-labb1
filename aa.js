@@ -1,3 +1,5 @@
+
+//används ej-kod fungerar ej. Uppdelad kod.
 searchField.addEventListener('keyup', handleKeyPress);
 
 function handleKeyPress(event) {

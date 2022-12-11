@@ -27,21 +27,21 @@ function renderBookList(bookList) {
   existingElement && root.removeChild(existingElement);
   bookList.length > 0 && searchField.value && root.insertAdjacentHTML('beforeend', BookList(bookList));
 }
-//eventlyssnare för mouseover
+//eventlyssnare för mouseenter
 function handleMouseEnter(li){
 
-  //getOne(li.id).then((apiBooks) => (bookList = apiBooks));
+ //funktionen getOne hämtar 
   getOne(li.id).then((book) => {
   
   li.insertAdjacentHTML('beforeend', BookDescrition(book));
   }
   );
 }
-
+//eventlyssnare för mouseleave
 function handleMouseLeave(li){
   const removebookDetail = document.getElementById(`bookDetail${li.id}`);
   console.log(`bookDetail${li.id}`);
-  //getOne(li.id).then((apiBooks) => (bookList = apiBooks));
+ 
   removebookDetail.remove();
   
   
@@ -49,11 +49,3 @@ function handleMouseLeave(li){
 }
 
 
-/* document.onmouseover('handle').addEventListener('mouseover', (e) => console.log(e)) */
-/* function renderBookDescription(bookDescription) {
-  
-} */
-
-/* document.getElementById('outer').addEventListener('mouseover', (e) => {
-  console.log('Lyssnare för outer div', e);  
-}); */
